@@ -69,7 +69,7 @@ app.post('/room/create' , async (req, res )=>{
         res.status(500).send({message : error.message}) ; 
       }
 })
-app.get('https://soul-server-i8u0sup0n-soulaimanelimanes-projects.vercel.app/:id' , async (req , res )=>{
+app.get('/room/message/:id' , async (req , res )=>{
   try {
     const id =parseInt(req.params.id) ;
      if (!id) {
