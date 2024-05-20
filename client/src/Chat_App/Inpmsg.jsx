@@ -15,7 +15,7 @@ function Inpmsg() {
         const idmsg = Math.floor(Math.random()*900000)+100000 ;
        const  senter = localStorage.getItem("name") ;
       
-        axios.post("https://soul-server-i8u0sup0n-soulaimanelimanes-projects.vercel.app/" ,{idmsg ,content, senter})
+        axios.post("http://127.0.0.1:2005/room/3" ,{idmsg ,content, senter})
         .catch(err => console.error(err))
         
         msgref.current.value =""}
