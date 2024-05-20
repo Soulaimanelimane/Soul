@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import io from 'socket.io-client';
 
-const socket = io('https://soul-server-i8u0sup0n-soulaimanelimanes-projects.vercel.app/'); 
+const socket = io('http://127.0.0.1:2005'); 
 
 function Message() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get("https://soul-server-i8u0sup0n-soulaimanelimanes-projects.vercel.app/3")
+    axios.get("http://127.0.0.1:2005/room/message/3")
       .then(res => {
         setMessages(res.data);
       })
