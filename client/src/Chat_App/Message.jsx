@@ -8,7 +8,7 @@ function Message() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:2005/room/message/3")
+    axios.get("https://soul-server-i8u0sup0n-soulaimanelimanes-projects.vercel.app/")
       .then(res => {
         setMessages(res.data);
       })
